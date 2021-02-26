@@ -1,32 +1,7 @@
 pipeline {
   agent any
 
-// using the Timestamper plugin we can add timestamps to the console log
-  options {
-    timestamps()
-  }
-   // tools { 
-       // maven 'Maven 3.3.9' 
-        //jdk 'jdk8' 
-   // }
-	
-  environment {
-    //Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
-    IMAGE = readMavenPom().getArtifactId()
-    VERSION = readMavenPom().getVersion()
-  }
-	
-  stages {
-    stage("Checkout Project") {
-      steps {
 
-        // Script blocks can run any Groovy script
-	//checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, 
-	//	  extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/arunsaxena01/DevOps-Demo-WebApp.git']]])
-      }
-
-    }
-	
 stage('Build') {
       agent {
         any {
