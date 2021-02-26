@@ -5,10 +5,10 @@ pipeline {
   options {
     timestamps()
   }
-    tools { 
+   // tools { 
        // maven 'Maven 3.3.9' 
         //jdk 'jdk8' 
-    }
+   // }
 	
   environment {
     //Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
