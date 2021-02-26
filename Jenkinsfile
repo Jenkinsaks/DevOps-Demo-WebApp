@@ -27,10 +27,6 @@ stage('Build') {
         }
       }
     }
-	
-
-	
-  }
 
   // All Stages and Pipeline can each have their own post section that is executed at different times
   post {
