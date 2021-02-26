@@ -6,8 +6,8 @@ pipeline {
     timestamps()
   }
     tools { 
-        maven 'Maven 3.3.9' 
-        jdk 'jdk8' 
+       // maven 'Maven 3.3.9' 
+        //jdk 'jdk8' 
     }
 	
   environment {
@@ -21,8 +21,8 @@ pipeline {
       steps {
 
         // Script blocks can run any Groovy script
-	checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, 
-		  extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/arunsaxena01/DevOps-Demo-WebApp.git']]])
+	//checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, 
+	//	  extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/arunsaxena01/DevOps-Demo-WebApp.git']]])
       }
 
     }
@@ -35,8 +35,8 @@ stage('Build') {
            * In this case we are running a container with maven so we don't have to install specific versions
            * of maven directly on the agent
            */
-          reuseNode true
-          image 'maven:3.5.0-jdk-8'
+          //reuseNode true
+          //image 'maven:3.5.0-jdk-8'
         }
       }
       steps {
@@ -48,7 +48,7 @@ stage('Build') {
       post {
         success {
           // we only worry about archiving the jar file if the build steps are successful
-          archiveArtifacts(artifacts: '**/target/*.jar', allowEmptyArchive: true)
+         // archiveArtifacts(artifacts: '**/target/*.jar', allowEmptyArchive: true)
         }
       }
     }
