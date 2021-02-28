@@ -31,7 +31,7 @@ pipeline {
     stage('Deploy to QA') {
       steps {
         echo 'Deploy to QA'
-        deploy(adapters: [tomcat8(credentialsId: 'tomcat-1', path: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/', url: 'http://52.255.157.89:8080/')], contextPath: '/QAWebapp', war: '**/*.war')
+        deploy(adapters: [tomcat8(credentialsId: 'tomcat-1', path: '', url: 'http://52.255.157.89:8080/')], contextPath: '/QAWebapp', war: '**/*.war')
       }
     }
 
