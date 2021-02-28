@@ -4,7 +4,7 @@ pipeline {
     stage('Message') {
       steps {
         echo 'Jenkins mini pipeline'
-        withMaven(jdk: 'jdk', maven: 'Maven', globalMavenSettingsFilePath: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin', globalMavenSettingsConfig: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin', mavenLocalRepo: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin', mavenSettingsConfig: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin', mavenSettingsFilePath: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin')
+        //withMaven(jdk: 'jdk', maven: 'Maven', globalMavenSettingsFilePath: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin', globalMavenSettingsConfig: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin', mavenLocalRepo: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin', mavenSettingsConfig: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin', mavenSettingsFilePath: '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin')
       }
     }
 
