@@ -25,6 +25,7 @@ pipeline {
     stage('Build Web App') {
       steps {
         sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn -B -DskipTests clean compile'
+        sh "/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn clean verify"
       }
     }
 
