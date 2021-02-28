@@ -21,5 +21,11 @@ pipeline {
       }
     }
 
+    stage('Build Web App') {
+      steps {
+        sh 'mvn -B -DskipTests clean compile'
+      }
+    }
+
   }
 }
