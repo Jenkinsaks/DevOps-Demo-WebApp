@@ -23,7 +23,7 @@ pipeline {
 
     stage('Build Web App') {
       steps {
-        sh 'mvn -B -DskipTests clean compile'
+        sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/Maven/bin/mvn -B -DskipTests clean compile'
       }
     }
 
