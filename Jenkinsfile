@@ -5,6 +5,7 @@ pipeline {
         maven = 'Maven'
         jdk = 'jdk'
       }
+  
   stages {
     stage('Message') {
       steps {
