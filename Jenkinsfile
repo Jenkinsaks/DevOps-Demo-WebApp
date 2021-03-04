@@ -33,7 +33,7 @@ stage('Docker Build and Tag') {
   stage('Publish image to Docker Hub') {
           
             steps {
-        withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+        withDockerRegistry([ credentialsId: "dockerhub1", url: "" ]) {
           sh  'docker push arunsaxena01/avnommunication01:latest'
         //  sh  'docker push arunsaxena01/avnommunication01:$BUILD_NUMBER' 
         }
