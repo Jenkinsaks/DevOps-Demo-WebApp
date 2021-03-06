@@ -53,7 +53,7 @@ stage('Docker Build and Tag') {
              
             steps {
                 echo "hello"
-                sh "docker -H ssh://root@52.255.157.89 run -d -p 8003:8080 arunsaxena01/avnommunication01"
+                sh "docker -H ssh://root@52.255.157.89 run -d -p 8004:8080 arunsaxena01/avnommunication01"
  
             }
         }
